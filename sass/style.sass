@@ -1,0 +1,620 @@
+$zolo: #FFD700
+$dark: black
+$white: white
+$gray: #868686
+$blue: #080045
+$telo: #eef3f6
+*
+    box-sizing: border-box
+body 
+    background-color: black
+    margin: 0
+ul, li
+    font-family: 'Vollkorn SC', serif
+    display: block
+    padding: 0
+    margin: 0
+    list-style: none
+.menu__item a 
+    font-family: 'Vollkorn SC', serif
+    font-size: 22px
+    padding: 10px
+    color: $white
+    position: relative
+    display: block
+    transition: 0.5s
+    overflow: hidden
+.menu__item a:hover 
+    text-decoration: none
+    color: $white
+    font-family: 'Vollkorn SC', serif
+.logo 
+    padding: 0
+    width: 120px
+    padding: 0px
+
+.menu_instagram 
+    
+    width: 55px
+.touchme
+    width: 100px
+    display: none
+/* Анимация меню */
+
+
+ul li a::before 
+    font-family: 'Vollkorn SC', serif
+    content: ''
+    position: absolute
+    top: calc(50% - 2px)
+    left: -100%
+    width: 100%
+    height: 4px
+    background-image: linear-gradient(to left, #4d3600, #6b4f02, #8a6a02, #aa8602, #c9a400)
+    transition: 0.5s
+    border-radius: 25px
+ul li a:hover 
+    color: #fff
+
+ul li a:hover::before 
+    animation: animate .5s linear forwards
+
+
+@keyframes animate 
+    0%
+        top: calc(50% - 2px)
+        left: -100%
+        height: 4px
+        z-index: 1
+  
+    50%
+        top: calc(50% - 2px)
+        left: 0
+        height: 4px
+        z-index: 1
+  
+    100%
+        top: 0
+        left: 0
+        height: 100%
+        z-index: -1
+  
+
+
+/* Шапка */
+.header 
+    background-image: url(/img/fonSite.png)
+    background-size: cover
+
+
+.header__title 
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+    padding-top: 70px
+    padding-bottom: 60px
+    font-size: 48px
+    
+.header__text 
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+    padding-bottom: 80px
+    font-size: 24px
+
+/* Анимация кнопки */
+.button     
+    color: white
+    background: black
+    font-size: 14px
+    padding: 15px
+    margin-bottom: 250px
+    border-radius: 15px
+    font-family: 'Vollkorn SC', serif
+    transition: box-shadow 1s ease, color 1s ease
+.button:hover
+    color: $dark
+    box-shadow: inset 6em 0 $telo
+    background-color: transparent
+    background-image: linear-gradient(to left, #4d3600, #6b4f02, #8a6a02, #aa8602, #c9a400)
+button:active, button:focus 
+    outline: none
+
+button::-moz-focus-inner 
+    border: 0
+
+
+.gradient-btn 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 180px
+    height: 60px
+    text-align: center
+    line-height: 60px
+    font-family: sans-serif
+    font-size: 24px
+    color: $dark
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 6px
+    transition: 0.5s
+//background-color: #000;
+    border: 4px solid #fff
+    border-radius: 60px
+    box-shadow: 0 5px 20px rgba(0,0,0, .5)
+    overflow: hidden
+
+.gradient-btn::before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to left, #1366ff, #ff0b6d)
+    z-index: -1
+    border-radius: 60px
+    transform: scaleX(0)
+    transform-origin: right
+    transition: transform .5s ease-in-out
+
+.gradient-btn:hover::before 
+    transform: scaleX(1)
+    transform-origin: left
+
+
+
+    
+
+        
+
+
+/* Техническое задание */
+ 
+
+
+
+
+
+
+
+
+/* ------------------------- */
+    
+.technical
+    color: $white
+    font-family: 'Vollkorn SC', serif
+   
+
+    
+    
+    
+.technical__title
+    margin-top: 30px
+    margin-bottom: 40px
+    font-size: 36px
+    
+
+.technical__miniTitle
+    margin-bottom: 20px
+    font-size: 20px
+    
+.technical__text
+    padding-bottom: 20px
+    font-size: 14px
+   
+.technical__pic
+    width: 840px
+    padding-top: 5px
+    float: right
+.technical__sizeMax
+    padding-bottom: 0px
+    
+
+    /* Разработка макета */
+.maket
+    background-color: $telo    
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+.maket__title
+    margin-top: 30px
+    margin-bottom: 40px
+    font-size: 36px
+    
+.maket__miniTitle
+    margin-bottom: 20px
+    font-size: 20px
+    
+.maket__text
+    padding-bottom: 20px
+    font-size: 14px
+    
+.maket__pic
+    width: 690px
+    padding-top: 30px
+    padding-right: 60px
+    float: left
+.maket__sizeMax
+    padding: 0px
+    padding-bottom: 10px
+    
+    
+/* Программирование сайта */
+.programming
+    color: $white
+    font-family: 'Vollkorn SC', serif
+.programming__title
+    margin-top: 30px
+    margin-bottom: 40px
+    font-size: 36px
+    
+.programming__miniTitle
+    margin-bottom: 20px
+    font-size: 20px
+    
+.programming__text
+    padding-bottom: 20px
+    font-size: 14px
+   
+.programming__pic
+    width: 840px
+    float: right
+    padding-top: 0px
+.programming__sizeMax
+    padding-top: 70px
+    padding-bottom: 60px
+
+/* Тестинг и сдача */
+.testing
+    background-color: $telo
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+.testing__title
+    margin-top: 40px
+    margin-bottom: 60px
+    font-size: 36px
+    
+.testing__miniTitle
+    margin-bottom: 20px
+    font-size: 20px
+    
+.testing__text
+    padding-bottom: 20px
+    font-size: 14px
+    
+.testing__pic
+    width: 690px
+    padding-top: 35px
+    padding-right: 60px
+    float: left
+.testing__sizeMax
+    padding-bottom: 50px
+
+/* Сотрудничество */
+.cooperation
+    text-align: center
+    color: $white
+    font-family: 'Vollkorn SC', serif
+    padding-top: 50px
+    padding-bottom: 10px
+.cooperation__title
+    padding-top: 20px
+    padding-bottom: 30px
+.cooperation__info
+    
+.cooperation__image
+    float: left
+    width: 9%
+    padding-bottom: 20px
+
+    
+.cooperation__text
+    color: $white
+    font-size: 18px
+    padding-left: 20px
+    float: right
+    margin-bottom: 0
+    margin-top: 10px
+
+/* Наши услуги */
+.price
+    background-color: $telo
+    color: $white
+    font-family: 'Vollkorn SC', serif
+    padding-bottom: 40px
+
+/* Карточки */
+.price__title
+    color: $dark
+    padding-top: 30px
+    padding-bottom: 5px
+.flipper 
+    position: relative
+    width: 280px
+    height: 520px
+    margin-top: 10px
+    -webkit-transform-style: preserve-3d
+    -moz-transform-style: preserve-3d
+    transform-style: preserve-3d
+    -webkit-transition: .7s linear
+    -moz-transition: .7s linear
+    -o-transition: .7s linear
+    transition: .7s linear
+
+.front, .back 
+    border-radius: 25px
+    border: 2px $white
+    font-family: 'Cabin', sans-serif
+    position: absolute
+    top: 0
+    left: 0
+    box-sizing: border-box
+    padding: 0px 0px 0px
+    width: 100%
+    height: 100%
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+
+.front 
+    border-radius: 25px
+    z-index: 2
+    -webkit-transform: rotateY(0deg)
+    -moz-transform: rotateY(0deg)
+    -ms-transform: rotateY(0deg)
+    transform: rotateY(0deg)
+    background: 
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1)
+    border-bottom: 1px solid #f5f5f5
+
+i 
+    color: $gray
+    display: inline-block
+    margin-bottom: 15px
+
+.header h3 
+    color: #18191a
+
+.front p 
+    color: #444444
+.flipper__pic
+    border-radius: 25px
+    width: 100%
+    height: 101%
+.back  
+    border-radius: 25px
+    -webkit-transform: rotateY(-180deg)
+    -moz-transform: rotateY(-180deg)
+    -ms-transform: rotateY(-180deg)
+    transform: rotateY(-180deg)
+    background-color: #D5CABD
+    color: white
+.content__price
+    color: $dark
+    position: relative
+    text-align: left
+    padding-top: 50px
+    height: 300px
+.content__price li
+    padding-bottom: 10px
+.footer__price
+    padding-left: 100px 
+    text-align: center
+.header__price
+    color: $dark
+.button__price
+    text-align: center
+.back h3 
+    padding-top: 30px
+    position: relative
+    text-align: center
+.back h3:after 
+    content: ""
+    width: 50px
+    height: 1px
+    position: absolute
+    bottom: -10px
+    left: 50%
+    background: white
+    margin-left: -25px
+.logo__list
+    width: 13%
+.back p 
+    padding-top: 15px
+    text-align: center
+.container:hover .flipper 
+    -webkit-transform: rotateY(180deg)
+    -moz-transform: rotateY(180deg)
+    -ms-transform: rotateY(180deg)
+    transform: rotateY(180deg)
+
+
+/* Мобильное приложение */
+.mobileApp
+    color: $white
+    font-family: 'Vollkorn SC', serif
+.mobileApp__title
+    padding-top: 30px
+    padding-bottom: 0px
+.mobileApp__pic
+    width: 500px
+    float: left
+.mobileApp__Alltext
+    position: relative
+    padding-top: 80px
+    padding-bottom: 20px
+.mobileApp__image
+    height: 20px
+.mobileApp__title__descr
+    font-family: 'Vollkorn SC', serif
+    font-size: 24px
+    text-align: center
+    padding-top: 5px
+    padding-bottom: 20px
+.mobileApp__text
+    font-size: 16px
+.mobileApp__text li
+    padding: 0px 5px 10px 5px
+.descr
+    color: $dark
+    display: none
+    margin-left: -350px
+    padding: 10px
+    margin-top: 17px
+    background-color: #D5CABD
+    
+    height: 400px
+    border-radius: 25px
+    -moz-box-shadow: 0 5px 5px rgba(0,0,0,0.3)
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.3)
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3)
+
+.mobileApp__Alltext:hover .descr
+    display: block
+    position: absolute
+    top: 50px
+    left: 200px
+    z-index: 9999
+    width: 500px
+    height: 300px
+
+/* О нас */
+.about
+    background-color: $telo
+    text-align: center
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+.about__title
+    padding-top: 20px
+    padding-bottom: 0px
+.about__image
+    width: 100px
+    text-align: center
+    padding-top: 30px
+    padding-bottom: 30px
+
+.about__text
+    color: $dark
+    font-family: 'Vollkorn SC', serif
+    font-size: 14px
+    height: 100px
+    padding-bottom: 0px
+.about__hover
+    margin-bottom: 10px
+.about__hover:hover
+    color: $dark
+    background-color: #D5CABD 
+    border-radius: 25px
+    .about__text
+        color: $white
+    .about__image
+        -webkit-animation: pulsing 2s infinite
+        animation: pulsing 2s infinite
+
+
+@-webkit-keyframes pulsing 
+  0% 
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+  
+  50% 
+    -webkit-transform: scale(1.0, 1.0)
+    transform: scale(1.0, 1.0)
+  
+  100% 
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+  
+
+
+@keyframes pulsing 
+    0%
+        -webkit-transform: scale(0.5, 0.5)
+        transform: scale(0.5, 0.5)
+  
+    50%
+        -webkit-transform: scale(1.0, 1.0)
+        transform: scale(1.0, 1.0)
+  
+    100%
+        -webkit-transform: scale(0.5, 0.5)
+        transform: scale(0.5, 0.5)   
+        
+    
+/* Подвал */
+.contact__tab
+    padding-top: 20px
+    padding-bottom: 20px
+    text-align: center
+    margin: auto
+    font-family: 'Vollkorn SC', serif
+    color: $white
+    background-color: $dark
+/*  border-radius: 25px 25px 0px 0px */
+.center
+    margin: auto
+    color: $white
+.contact__logo
+    padding: 0
+    width: 120px
+.contact__contact
+    text-align: left
+    margin: 0
+.contact__num
+    text-align: left
+    margin: 0
+.contact__email
+    text-align: left
+    margin: 0
+.contact__slog
+    margin: 0
+.button__footer
+    color: white
+    background: black
+    font-size: 14px
+    padding: 15px
+    margin-bottom: 250px
+    border-radius: 15px
+    font-family: 'Vollkorn SC', serif
+    margin-bottom: 0
+.contact__gmail
+    margin-top: 3px
+    width: 55px
+.contact__instagram
+    margin-left: 5px
+    width: 65px
+
+/* Анимация */
+.cooperation__info
+    position: relative
+    display: inline-block
+    
+
+.cooperation__info:before 
+    position: absolute
+    left: 0
+    top: 0
+    width: 0
+    height: 100%
+    background-image: linear-gradient(to left, #4d3600, #6b4f02, #8a6a02, #aa8602, #c9a400)
+    z-index: -1
+    content: ''
+    margin-top: -10px
+    border-radius: 25px
+
+.cooperation__info:hover::before 
+    animation: bg-animation 0.6s 1
+    animation-fill-mode: forwards
+    
+
+
+@keyframes bg-animation 
+    0%
+        width: 10%
+  
+    100%
+        width: 100%
+  
+
+@import 'media'
+@import 'scrol'

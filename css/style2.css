@@ -1,0 +1,68 @@
+@import url(/css/fonts.css);
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item a {
+    font-family: 'Vollkorn SC',
+        bold;
+    font-size: 22px;
+    color: white;
+}
+
+.menu__item a:hover {
+    text-decoration: none;
+    color: #868686;
+}
+
+.menu__item {
+    margin-left: 20px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.logo {
+    padding: 0;
+    width: 150px;
+}
+
+.menu_instagram {
+    width: 55px;
+}
+
+/* Шапка */
+.header {
+    background-image: url(/img/MacBook.png);
+    background-size: cover;
+}
+
+.header__title {
+    color: white;
+    font-family: 'Vollkorn SC',
+        bold;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+.header__text {
+    color: white;
+    font-family: 'Vollkorn SC',
+        Regular;
+    padding-bottom: 80px;
+}
+
+.button {
+    color: #FFD700;
+    margin-bottom: 250px;
+}
